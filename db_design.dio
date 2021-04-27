@@ -13,7 +13,7 @@
                 <mxCell id="64" value="&lt;font size=&quot;3&quot;&gt;purchasesテーブル&lt;br&gt;user(references型)&lt;br&gt;item(references型)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=none;overflow=fill;" vertex="1" parent="1">
                     <mxGeometry x="80" y="400" width="300" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="&lt;font size=&quot;3&quot;&gt;ordersテーブル&lt;br&gt;postal_code(string型,NOT NULL)&lt;br&gt;shipping_area_id(string型,NOT NULL)&lt;br&gt;city(string型,NOT NULL)&lt;br&gt;address(string型,NOT NULL)&lt;br&gt;builiding_name(string型)&lt;br&gt;phone_number(integer型,NOT NULL)&lt;br&gt;purchase(references型)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=none;overflow=fill;" vertex="1" parent="1">
+                <mxCell id="65" value="&lt;font size=&quot;3&quot;&gt;ordersテーブル&lt;br&gt;postal_code(string型,NOT NULL)&lt;br&gt;shipping_area_id(integer型,NOT NULL)&lt;br&gt;city(string型,NOT NULL)&lt;br&gt;address(string型,NOT NULL)&lt;br&gt;builiding_name(string型)&lt;br&gt;phone_number(integer型,NOT NULL)&lt;br&gt;purchase(references型)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=#c0c0c0;fillColor=none;overflow=fill;" vertex="1" parent="1">
                     <mxGeometry x="520" y="400" width="320" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="71" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="63">
