@@ -27,6 +27,6 @@ class Item < ApplicationRecord
   end
 
 
-  validates :price, format: { with: /\A[0-9]+\z/, message: 'Half-width number' }, length: { in: 3..7 }, numericality: { greater_than: 300, less_than: 10000000 }
+  validates :price, format: { with: /\A[0-9]+\z/, message: 'Half-width number' }, length: { in: 3..7 }, numericality: { greater_than: 299, less_than: 10000000 }
 
 end

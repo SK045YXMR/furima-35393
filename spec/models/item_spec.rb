@@ -72,10 +72,10 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is too long (maximum is 7 characters)')
       end
-      it '価格が300円以上でないと出品できない' do
+      it '価格が300円未満だと出品できない' do
         @item.price = 299
         @item.valid?
-        expect(@item.errors.full_messages).to include('Price must be greater than 300')
+        expect(@item.errors.full_messages).to include('Price must be greater than 299')
       end
       it '価格が9999999円以下でないと出品できない' do
         @item.price = 10000000
