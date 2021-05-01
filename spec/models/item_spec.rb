@@ -8,11 +8,6 @@ RSpec.describe Item, type: :model do
   describe '商品出品機能' do
     context '商品が出品できるとき' do
       it '商品情報が適切に入力されていれば出品できる' do
-        @item.item_category_id = 2
-        @item.item_status_id = 2
-        @item.shopping_charges_id = 2
-        @item.shipping_area_id = 2
-        @item.days_to_ship_id = 2
         expect(@item).to be_valid
       end
     end
