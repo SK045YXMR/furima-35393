@@ -2,7 +2,7 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :item_category
   belongs_to :item_status
-  belongs_to :shopping_charges
+  belongs_to :shopping_charge
   belongs_to :shipping_area
   belongs_to :days_to_ship
 
@@ -21,7 +21,7 @@ class Item < ApplicationRecord
   with_options numericality: { other_than: 1 } do
     validates :item_category_id
     validates :item_status_id
-    validates :shopping_charges_id
+    validates :shopping_charge_id
     validates :shipping_area_id
     validates :days_to_ship_id
   end
