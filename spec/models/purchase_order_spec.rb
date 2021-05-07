@@ -13,6 +13,10 @@ RSpec.describe PurchaseOrder, type: :model do
       it '購入情報が適切に入力されていれば購入できる' do
         expect(@purchase_order).to be_valid
       end
+      it '建物名が空でも購入できる' do
+        @purchase_order.building_name = ''
+        expect(@purchase_order).to be_valid
+      end
     end
     context '商品が購入できないとき' do
       it 'トークンが空では購入できない' do
@@ -45,10 +49,6 @@ RSpec.describe PurchaseOrder, type: :model do
         @purchase_order.valid?
         expect(@purchase_order.errors.full_messages).to include("Address can't be blank")
       end
-      it '建物名が空でも購入できる' do
-        @purchase_order.building_name = ''
-        expect(@purchase_order).to be_valid
-      end
       it '電話番号が空では購入できない' do
         @purchase_order.phone_number = ''
         @purchase_order.valid?
@@ -56,6 +56,11 @@ RSpec.describe PurchaseOrder, type: :model do
       end
       it '電話番号は数値以外が入力されると購入できない' do
         @purchase_order.phone_number = 'test-123456'
+        @purchase_order.valid?
+        expect(@purchase_order.errors.full_messages).to include("Phone number Input only number")
+      end
+      it '電話番号は12桁以上入力されると購入できない' do
+        @purchase_order.phone_number = '090123456789'
         @purchase_order.valid?
         expect(@purchase_order.errors.full_messages).to include("Phone number Input only number")
       end
