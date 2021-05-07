@@ -4,7 +4,6 @@ class PurchasesController < ApplicationController
   before_action :user_sold_out, only: [:index, :create]
 
   def index
-    @item = Item.find(params[:item_id])
     @purchase_order = PurchaseOrder.new
   end
 
