@@ -38,7 +38,7 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include('Item status must be other than 1')
       end
       it '配送料のidが1では出品できない' do
-        @item.shopping_charges_id = 1
+        @item.shopping_charge_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include('Shopping charges must be other than 1')
       end
