@@ -1,7 +1,7 @@
 class PurchasesController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
-  before_action :item_sold_out, only: [:index]
-  before_action :user_sold_out, only: [:index]
+  before_action :authenticate_user!, only: [:index, :create]
+  before_action :item_sold_out, only: [:index, :create]
+  before_action :user_sold_out, only: [:index, :create]
 
   def index
     @item = Item.find(params[:item_id])
