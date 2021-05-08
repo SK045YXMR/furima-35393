@@ -1,5 +1,6 @@
 function item_calc () {
   const priceForm = document.getElementById('item-price');
+  if(!priceForm){ return false; };
     priceForm.addEventListener("input", () => {
       const formValue = priceForm.value;
       const salesComm = document.getElementById('add-tax-price');
