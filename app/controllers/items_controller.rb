@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
-  before_action :set_params, only: [:show, :edit, :uodate, :destroy]
+  before_action :set_params, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destoroy]
 
   def index
@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
   end
 
   def move_to_index
-    if current_user.id != @item.user_id || @item.purchase != nil
+     if current_user.id != @item.user_id || @item.purchase != nil
       redirect_to root_path
     end
   end
