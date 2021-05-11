@@ -17,6 +17,7 @@
 
 - has_many :items
 - has_many :purchases
+- has_many :comments
 
 ## items テーブル
 
@@ -36,6 +37,7 @@
 
 - belongs_to :user
 - has_one :purchase
+- has_many :comments
 
 ## purchases テーブル
 
